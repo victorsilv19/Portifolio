@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Victor Silva | Portfólio</title>
+    <meta name="description" content="Portfólio de Victor Nascimento Silva, Desenvolvedor de Software e profissional de TI.">
+    <!-- Meta tags Open Graph para melhorar o card quando o link for compartilhado -->
+    <meta property="og:title" content="Victor Silva | Portfólio">
+    <meta property="og:description" content="Portfólio de Victor Nascimento Silva, Desenvolvedor de Software e profissional de TI.">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Fontes do Google: Inter pro texto normal e JetBrains Mono pro código -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;800&family=JetBrains+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+    <!-- Ícones do Font Awesome (redes sociais e afins) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Fundo de partículas animadas que o JS desenha -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- MENU SUPERIOR FIXO -->
+    <nav>
+        <div class="logo">Victor<span class="cursor">_</span></div>
+        <ul class="nav-links">
+            <li><a href="#hero">Início</a></li>
+            <li><a href="#about">Perfil</a></li>
+            <li><a href="#skills">Habilidades</a></li>
+            <li><a href="#education">Formação</a></li>
+            <li><a href="#contact">Contato</a></li>
+        </ul>
+        </ul>
+        <button class="hamburger" aria-label="Abrir menu de navegação"> <!-- Menu mobile -->
+            <i class="fas fa-bars" aria-hidden="true"></i>
+        </button>
+    </nav>
+
+    <main>
+        <!-- SEÇÃO HERO: A primeira tela do site (boas-vindas e introdução) -->
+        <section id="hero" class="hero section">
+            <div class="hero-content">
+                <p class="subtitle">&gt; Olá, mundo! Eu sou</p>
+                <h1 style="text-align: center;">Victor Nascimento </h1>
+                <h2 class="role" style="text-align: center;">Tecnologia & Desenvolvimento</h2>
+
+                <div class="terminal-box">
+                    <div class="terminal-header">
+                        <div class="dots">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <span class="terminal-title">bash - terminal@portfolio:~</span>
+                    </div>
+                    <div class="terminal-body" id="typed-text-container">
+                        <!-- O texto sendo "digitado" aparece aqui (controlado pelo JS) -->
+                    </div>
+                </div>
+
+                <div class="hero-cta">
+                    <a href="#about" class="btn primary-btn"><i class="fas fa-user-astronaut"></i> Conhecer Perfil</a>
+                    <a href="currículo.pdf" target="_blank" rel="noopener noreferrer" class="btn secondary-btn" aria-label="Baixar cópia do currículo"><i class="fas fa-download"></i> Baixar Currículo</a>
+                    <a href="#contact" class="btn secondary-btn"><i class="fas fa-envelope"></i> Fale Comigo</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO SOBRE: Perfil, foto, texto sobre mim e habilidades comportamentais -->
+        <section id="about" class="section">
+            <h2 class="section-title">Resumo Profissional <span class="line"></span></h2>
+            <div class="about-grid">
+
+                <!-- Container da foto de perfil -->
+                <div class="about-photo glass-card">
+                    <div class="photo-placeholder">
+                        <div class="photo-overlay">
+                            <i class="fas fa-camera"></i>
+                            <span>Sua Foto</span>
+                        </div>
+                        <!-- Foto do Victor -->
+                        <img src="euProfissional.jpeg" alt="Foto de Perfil do Victor" id="profile-img">
+                    </div>
+                </div>
+
+                <!-- Textinho sobre mim -->
+                <div class="about-text glass-card">
+                    <div class="icon-header"><i class="fas fa-user-circle"></i> Sobre Mim</div>
+                    <p>
+                        Tenho 21 anos e me interesso por tecnologia. Estou sempre buscando
+                        aprender mais e melhorar minhas habilidades, principalmente na
+                        resolução de problemas. Tenho um foco constante em <strong>resolução
+                            de problemas e aprendizado contínuo</strong>. Acredito que o conhecimento
+                        é a principal ferramenta para transformar desafios em soluções viáveis.
+                    </p>
+                    <p>Meu objetivo atual é desenvolver habilidades práticas atuando no mercado. Busco ativamente
+                        oportunidades em vagas de <strong>Estágio, Desenvolvedor Júnior, Técnico em TI, Suporte
+                            Técnico</strong> e/ou rotinas de cunho <strong>Administrativo</strong> que interajam com
+                        tecnologia.</p>
+                </div>
+                <div class="about-stats glass-card">
+                    <div class="icon-header"><i class="fas fa-brain"></i> Soft Skills</div>
+                    <ul class="soft-skills-list">
+                        <li>
+                            <div class="skill-icon"><i class="fas fa-users"></i></div>
+                            <div class="skill-details">
+                                <strong>Trabalho em Equipe</strong>
+                                <span>Bom relacionamento interpessoal.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="skill-icon"><i class="fas fa-comments"></i></div>
+                            <div class="skill-details">
+                                <strong>Comunicação Ativa</strong>
+                                <span>Clareza nas ideias e empatia.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="skill-icon"><i class="fas fa-lightbulb"></i></div>
+                            <div class="skill-details">
+                                <strong>Proatividade</strong>
+                                <span>Iniciativa constante em resolver problemas.</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO PROJETOS: Alguns projetos em destaque -->
+        <section id="projects" class="section">
+            <h2 class="section-title">Projetos em Destaque <span class="line"></span></h2>
+            <div class="project-grid">
+                <!-- Card de Projeto 1: DevMeet Hub -->
+                <div class="project-card glass-card">
+                    <div class="project-content">
+                        <div class="project-header">
+                            <i class="fas fa-folder-open folder-icon"></i>
+                            <div class="project-links">
+                                <a href="https://github.com/victorsilv19/devmeet-hub" target="_blank" aria-label="Visualizar Github do Projeto"><i class="fab fa-github"></i></a>
+                                <a href="https://github.com/victorsilv19/devmeet-hub" target="_blank" aria-label="Acessar Projeto Externo"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                        <h3 class="project-title">DevMeet Hub</h3>
+                        <p class="project-description">
+                           Aplicação full-stack desenvolvida com Angular no front-end e Java Spring Boot no back-end. Focada no gerenciamento de eventos, com interface moderna, integração com banco de dados PostgreSQL e consumo de API REST externa.
+                        </p>
+                        <div class="project-techs tags">
+                            <span class="tag">Angular</span>
+                            <span class="tag">Spring Boot</span>
+                            <span class="tag">PostgreSQL</span>
+                            <span class="tag">API REST</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card de Projeto 2: Sistema de Biblioteca -->
+                <div class="project-card glass-card">
+                    <div class="project-content">
+                        <div class="project-header">
+                            <i class="fas fa-folder-open folder-icon"></i>
+                            <div class="project-links">
+                                <a href="https://github.com/victorsilv19/SistemaBiblioteca" target="_blank" aria-label="Visualizar Github do Projeto"><i class="fab fa-github"></i></a>
+                                <a href="https://github.com/victorsilv19/SistemaBiblioteca" target="_blank" aria-label="Acessar Projeto Externo"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                        <h3 class="project-title">Sistema de Biblioteca</h3>
+                        <p class="project-description">
+                           Sistema back-end desenvolvido em Java utilizando Spring Boot para gerenciamento de uma biblioteca.  
+A aplicação permite realizar operações CRUD (Create, Read, Update, Delete) em entidades como livros, autores, editoras e bibliotecas.
+                        </p>
+                        <div class="project-techs tags">
+                            <span class="tag">Java</span>
+                            <span class="tag">Spring Boot</span>
+                            <span class="tag">CRUD</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card de Projeto 3: Sistema Acadêmico -->
+                <div class="project-card glass-card">
+                    <div class="project-content">
+                        <div class="project-header">
+                            <i class="fas fa-folder-open folder-icon"></i>
+                            <div class="project-links">
+                                <a href="https://github.com/victorsilv19/PM4_SistemaAcademico" target="_blank" aria-label="Visualizar Github do Projeto"><i class="fab fa-github"></i></a>
+                                <a href="https://github.com/victorsilv19/PM4_SistemaAcademico" target="_blank" aria-label="Acessar Projeto Externo"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                        <h3 class="project-title">Sistema Acadêmico</h3>
+                        <p class="project-description">
+                           Este projeto foi desenvolvido como parte do Projeto Mensal 4 (PM04) do curso de Análise e Desenvolvimento de Sistemas da Descomplica Uniamerica.
+
+Trata-se de um sistema acadêmico com interface gráfica em Java Swing, persistência de dados com PostgreSQL e organização baseada em arquitetura MVC, utilizando o banco de dados.
+                        </p>
+                        <div class="project-techs tags">
+                            <span class="tag">Java</span>
+                            <span class="tag">Swing</span>
+                            <span class="tag">PostgreSQL</span>
+                            <span class="tag">MVC</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO HABILIDADES: Cards com linguagens, bancos de dados, ferramentas e idiomas -->
+        <section id="skills" class="section">
+            <h2 class="section-title">Experiência & Tecnologias <span class="line"></span></h2>
+            <div class="skills-container">
+                <div class="skill-category glass-card">
+                    <h3><i class="fas fa-code"></i> Linguagens & Web</h3>
+                    <div class="tags">
+                        <span class="tag"><i class="fab fa-java"></i> Java 17</span>
+                        <span class="tag"><i class="fas fa-leaf"></i> Spring Boot</span>
+                        <span class="tag"><i class="fab fa-js"></i> JavaScript</span>
+                        <span class="tag"><i class="fab fa-angular"></i> Angular</span>
+                        <span class="tag">TypeScript</span>
+                        <span class="tag">C</span>
+                        <span class="tag"><i class="fab fa-html5"></i> HTML5</span>
+                        <span class="tag"><i class="fab fa-css3-alt"></i> CSS3</span>
+                    </div>
+                </div>
+
+                <div class="skill-category glass-card">
+                    <h3><i class="fas fa-database"></i> Dados & Office</h3>
+                    <div class="tags">
+                        <span class="tag"><i class="fas fa-server"></i> Banco de Dados SQL</span>
+                        <span class="tag"><i class="fas fa-file-word"></i> Word</span>
+                        <span class="tag"><i class="fas fa-file-excel"></i> Excel</span>
+                        <span class="tag"><i class="fas fa-file-powerpoint"></i> PowerPoint</span>
+                        <span class="tag"><i class="fas fa-envelope-open-text"></i> Outlook</span>
+                        <span class="tag"><i class="fas fa-chart-pie"></i> Power BI</span>
+                    </div>
+                </div>
+
+                <div class="skill-category glass-card">
+                    <h3><i class="fas fa-globe"></i> Idiomas</h3>
+                    <div class="tags">
+                        <span class="tag highlight">Inglês Nível Intermediário</span>
+                        <span class="tag">Português Nativo</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO EDUCAÇÃO E CERTIFICAÇÕES: Linha do tempo dos estudos e cursinhos -->
+        <section id="education" class="section">
+            <h2 class="section-title">Histórico Acadêmico <span class="line"></span></h2>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <div class="timeline-header">
+                            <span class="date">01/2024 - 06/2026</span>
+                            <span class="badge">Em andamento (5º Período)</span>
+                        </div>
+                        <h3>Análise e Desenvolvimento de Sistemas</h3>
+                        <p class="institution"><i class="fas fa-university"></i> Uniamérica - Foz do Iguaçu</p>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="section-title" style="margin-top: 5rem;">Certificações <span class="line"></span></h2>
+            <div class="certs-grid">
+                <div class="cert-card glass-card">
+                    <i class="fas fa-language cert-icon"></i>
+                    <h4>Curso de Inglês</h4>
+                    <p>Concluído</p>
+                </div>
+                <div class="cert-card glass-card">
+                    <i class="fas fa-database cert-icon"></i>
+                    <h4>Banco de Dados SQL</h4>
+                    <p>Fundamentos práticos e modelagem</p>
+                </div>
+                <div class="cert-card glass-card">
+                    <i class="fas fa-file-excel cert-icon"></i>
+                    <h4>Excel</h4>
+                    <p>Nível Intermediário</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO DE CONTATO: Cards com links pro LinkedIn, GitHub, Whats e e-mail -->
+        <section id="contact" class="section">
+            <h2 class="section-title">Entrar em Contato <span class="line"></span></h2>
+            <p class="contact-subtitle">Sinta-se à vontade para me mandar uma mensagem sobre oportunidades ou projetos!
+            </p>
+
+            <div class="contact-grid">
+                <a href="mailto:victor.silvafoz@gmail.com" class="contact-card glass-card">
+                    <div class="icon-wrapper"><i class="fas fa-envelope"></i></div>
+                    <h3>E-mail</h3>
+                    <p>victor.silvafoz@gmail.com</p>
+                </a>
+
+                <a href="tel:+5545998168705" class="contact-card glass-card">
+                    <div class="icon-wrapper"><i class="fab fa-whatsapp"></i></div>
+                    <h3>Telefone / WhatsApp</h3>
+                    <p>(45) 99816-8705</p>
+                </a>
+
+                <a href="https://www.linkedin.com/in/victor-silvafoz" target="_blank" class="contact-card glass-card">
+                    <div class="icon-wrapper"><i class="fab fa-linkedin-in"></i></div>
+                    <h3>LinkedIn</h3>
+                    <p>in/victor-silvafoz</p>
+                </a>
+
+                <a href="https://github.com/victorsilv19" target="_blank" class="contact-card glass-card">
+                    <div class="icon-wrapper"><i class="fab fa-github"></i></div>
+                    <h3>GitHub</h3>
+                    <p>victorsilv19</p>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- RODAPÉ: Copyright e techs do projeto -->
+    <footer>
+        <div class="footer-content">
+            <div class="logo">Victor<span class="cursor">_</span></div>
+            <p>&copy; 2026 Victor Nascimento Silva. Todos os direitos reservados.</p>
+            <p class="footer-tech">Desenvolvido com <i class="fab fa-html5" style="color:#e34c26;"></i> <i
+                    class="fab fa-css3-alt" style="color:#264de4;"></i> <i class="fab fa-js" style="color:#f7df1e;"></i>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Script principal (animações, menu e afins) -->
+    <script src="script.js"></script>
+</body>
+
+</html>
